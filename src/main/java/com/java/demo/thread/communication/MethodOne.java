@@ -17,13 +17,17 @@ public class MethodOne {
                     for (int i = 0; i < arr.length; i=i+2) {
                         synchronized (threadToGo) {
                             while (threadToGo.value == 2)
-                                threadToGo.wait(); //wait方法需要放在while循环中调用。调用wait
+                                threadToGo.wait(); //wait方法放在while循环中调用。调用wait
                             // 方法后，线程进入阻塞等待状态，且释放对象锁
                             Helper.print(arr[i], arr[i + 1]);
                             threadToGo.value = 2;
-                            threadToGo.notify();  //调用notify
-                            // 方法，唤醒处于wait状态的线程，且下一个循环中value等于2，会调用wait
-                            // 方法，从而释放锁，其他的线程即可获取到锁。
+                            /**
+                             * 调用notify方法，唤醒一个处于wait状态的线程，另外要注意当前线程也可以参与获取对象锁，
+                             * 但是下一个循环中value等于2
+                             * ，会调用wait方法，即使当前线程获取到锁，调用wait
+                             * 后也会释放锁，并进入wait状态（进入对象的等待队列中），其他的线程即可获取到锁。
+                             */
+                            threadToGo.notify();
                         }
                     }
                 } catch (InterruptedException e) {
