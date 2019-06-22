@@ -18,7 +18,7 @@ public class InsertionSortDemo {
     }
 
     /**
-     * 选择排序 (升序）
+     * 插入排序 (升序）
      * @param array
      * @return 排序后的数组
      */
