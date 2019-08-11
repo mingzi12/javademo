@@ -44,7 +44,7 @@ public class FindEleInArray {
     public static boolean isContanin(int[][] array, int target) {
         int low = array.length - 1;  //二维数组行宽
         int col = 0;
-        int maxCol = array[0].length;  //二维数组列宽
+        int maxCol = array[0].length - 1;  //二维数组列宽
         for (int i = 0 ; i < low ; i++) {
             for (int j = 0 ; j < array[i].length ; j++) {
                 System.out.print(array[i][j]);
