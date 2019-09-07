@@ -12,5 +12,8 @@ public class EnumerationTest {
         SIZE small = SIZE.valueOf("MEDIUM");
         System.out.println(medium.getDesc());
         System.out.println(small.getDesc());
+        if (args != null && args.length > 0) {
+            System.out.println(args[0]);
+        }
     }
 }
