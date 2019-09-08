@@ -18,5 +18,6 @@ public class InheritDemo {
         但是这个被调用的方法必须是在超类中定义过的，也就是说被子类覆盖的方法。该调用animal.sleep()会报错，因为父类中没有定义sleep()方法，
         若想调用sleep()方法，需要强制转型为Dog类型*/
         animal.call(); //父类中定义了call()方法，所以可以使用父类类型的引用变量调用call方法。
+        ((Dog) animal).sleep(); //调用sleep()方法，需要强制转型为Dog类型
     }
 }
