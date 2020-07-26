@@ -7,24 +7,24 @@ package com.object.init.demo;
  */
 public class Derive extends Base{
 
-    private Member m1 = new Member("Member 1");
+    private Member m1 = new Member("子类的成员变量m1");
     private Member m3 ;
 
     static {
-        System.out.println("Initial Block()");
+        System.out.println("子类的static代码块");
     }
 
     public Derive() {
-        m3 = new Member("Member 3");
-        System.out.println("Derive()1");
+        m3 = new Member("子类的构造函数");
+        System.out.println("子类的构造函数Derive()");
     }
 
-    private Member m2 = new Member("Member 2");
+    private Member m2 = new Member("子类的成员变量m2");
     private int i = getInt();
 
     public int getInt()
     {
-        System.out.println("getInt()");
+        System.out.println("初始化子类的成员变量i");
         return 2;
     }
 
