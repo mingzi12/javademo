@@ -18,9 +18,9 @@ public class GenericTest {
         System.out.println(aClass);
 
         ArrayList<String> list = new ArrayList<>();
-        Class<? extends ArrayList> aClass1 = list.getClass();
+        Class<? extends ArrayList> arrayListClass = list.getClass();
 
-        System.out.println(aClass1);
+        System.out.println(arrayListClass);
 
         // 无界通配符？只能用于读取数据时使用，新增数据时，不能使用，如下例子编译就会报错
         //List<?> aList = new ArrayList<>();

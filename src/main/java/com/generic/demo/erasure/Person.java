@@ -8,6 +8,14 @@ package com.generic.demo.erasure;
 public class Person implements Comparable<Person>{
     private int age;
 
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
+    public Person() {
+        super();
+    }
 
     public Person(int age) { this.age = age; }
 
