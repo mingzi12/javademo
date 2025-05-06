@@ -1,4 +1,4 @@
-package com.random;
+package com.random.demo;
 
 import org.apache.commons.codec.binary.Base64;
 

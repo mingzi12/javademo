@@ -1,4 +1,4 @@
-package com.enumeration;
+package com.enumeration.demo;
 
 /**
  * @author XXX

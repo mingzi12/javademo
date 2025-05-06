@@ -1,4 +1,4 @@
-package com.thread.communication;
+package com.thread.demo.communication;
 
 /**
  * @author TODO

@@ -13,6 +13,7 @@ public class ListDemo {
     public static void main(String[] args) {
         List<String> userList = new ArrayList<>(10);
         userList.add("peter");
+        String item = userList.get(0);
         System.out.println(userList);
     }
 }

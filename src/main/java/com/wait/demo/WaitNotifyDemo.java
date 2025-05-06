@@ -1,4 +1,4 @@
-package com.wait;
+package com.wait.demo;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

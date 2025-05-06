@@ -7,8 +7,8 @@ Full thread dump Java HotSpot(TM) 64-Bit Server VM (25.131-b11 mixed mode):
 
 "BlockedThread-2" #15 prio=5 os_prio=0 tid=0x000000001a0e6000 nid=0x2d0 waiting for monitor entry [0x000000001b03f000]
    java.lang.Thread.State: BLOCKED (on object monitor)
-        at com.thread.demo.ThreadState$Blocked.run(ThreadState.java:48)
-        - waiting to lock <0x00000000d60cd1d0> (a java.lang.Class for com.thread.demo.ThreadState$Blocked)
+        at ThreadState$Blocked.run(ThreadState.java:48)
+        - waiting to lock <0x00000000d60cd1d0> (a java.lang.Class for ThreadState$Blocked)
         at java.lang.Thread.run(Thread.java:748)
 
 "BlockedThread-1" #14 prio=5 os_prio=0 tid=0x000000001a0e5800 nid=0x3cb0 waiting on condition [0x000000001af3f000]
@@ -16,18 +16,18 @@ Full thread dump Java HotSpot(TM) 64-Bit Server VM (25.131-b11 mixed mode):
         at java.lang.Thread.sleep(Native Method)
         at java.lang.Thread.sleep(Thread.java:340)
         at java.util.concurrent.TimeUnit.sleep(TimeUnit.java:386)
-        at com.thread.demo.ThreadState.second(ThreadState.java:55)
-        at com.thread.demo.ThreadState$Blocked.run(ThreadState.java:48)
-        - locked <0x00000000d60cd1d0> (a java.lang.Class for com.thread.demo.ThreadState$Blocked)
+        at ThreadState.second(ThreadState.java:55)
+        at ThreadState$Blocked.run(ThreadState.java:48)
+        - locked <0x00000000d60cd1d0> (a java.lang.Class for ThreadState$Blocked)
         at java.lang.Thread.run(Thread.java:748)
 
 "WaitingThread" #13 prio=5 os_prio=0 tid=0x000000001a0e1000 nid=0x4d0 in Object.wait() [0x000000001ae3e000]
    java.lang.Thread.State: WAITING (on object monitor)
         at java.lang.Object.wait(Native Method)
-        - waiting on <0x00000000d60cabf0> (a java.lang.Class for com.thread.demo.ThreadState$Waiting)
+        - waiting on <0x00000000d60cabf0> (a java.lang.Class for ThreadState$Waiting)
         at java.lang.Object.wait(Object.java:502)
-        at com.thread.demo.ThreadState$Waiting.run(ThreadState.java:35)
-        - locked <0x00000000d60cabf0> (a java.lang.Class for com.thread.demo.ThreadState$Waiting)
+        at ThreadState$Waiting.run(ThreadState.java:35)
+        - locked <0x00000000d60cabf0> (a java.lang.Class for ThreadState$Waiting)
         at java.lang.Thread.run(Thread.java:748)
 
 "TimeWaitingThread" #12 prio=5 os_prio=0 tid=0x000000001a0dc000 nid=0x4218 waiting on condition [0x000000001ad3f000]
@@ -35,8 +35,8 @@ Full thread dump Java HotSpot(TM) 64-Bit Server VM (25.131-b11 mixed mode):
         at java.lang.Thread.sleep(Native Method)
         at java.lang.Thread.sleep(Thread.java:340)
         at java.util.concurrent.TimeUnit.sleep(TimeUnit.java:386)
-        at com.thread.demo.ThreadState.second(ThreadState.java:55)
-        at com.thread.demo.ThreadState$TimeWaiting.run(ThreadState.java:24)
+        at ThreadState.second(ThreadState.java:55)
+        at ThreadState$TimeWaiting.run(ThreadState.java:24)
         at java.lang.Thread.run(Thread.java:748)
 
 "Service Thread" #11 daemon prio=9 os_prio=0 tid=0x000000001a047800 nid=0x22e0 runnable [0x0000000000000000]

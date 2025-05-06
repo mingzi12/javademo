@@ -1,4 +1,4 @@
-package com.thread.communication;
+package com.thread.demo.communication;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

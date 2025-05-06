@@ -1,5 +1,7 @@
 package com;
 
+import org.apache.poi.hssf.record.DVALRecord;
+
 public class TestString {
 
     public static void main(String[] args) {
@@ -26,8 +28,13 @@ public class TestString {
     }
 
     public static void printStr(String start, String str) {
-        int len = str.length();
-        for (int i=0; i<len; i++) {
+        char[] chars = new char[str.length()];
+        int length = chars.length;
+        String[] strArrays = {"a", "b", "c", "d", "e", "f", "d"};
+        int len1 = strArrays.length;
+        char[] chars1 = str.toCharArray();
+        int len2 = str.length();
+        for (int i=0; i<len2; i++) {
             String s = String.valueOf(str.charAt(i));
             StringBuffer buffer = new StringBuffer(str);
             buffer.deleteCharAt(i);

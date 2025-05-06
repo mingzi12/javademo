@@ -69,7 +69,7 @@ public class JavaTest {
                     break;
                 }
 
-                if (c == '0' && i > 0 && i < str.length() - 2) {
+                if (c == '0' && i < str.length() - 2) {
                     if ('0' == str.charAt(i - 1) || '0' == str.charAt(i + 1)) {
                         System.out.print("!error");
                         break;
@@ -112,15 +112,15 @@ public class JavaTest {
         int z = '9';
         String str = "10nbb";
         if('2' == '2') {
-            System.out.print("=====");
+            System.out.println("=====");
         }
         if('0' == 48) {
-            System.out.print("48=====");
+            System.out.println("48=====");
         }
-        System.out.print(str);
-        System.out.print(a);
-        System.out.print(z);
-        System.out.print(Integer.parseInt(str.substring(0, 2)));
+        System.out.println(str);
+        System.out.println(a);
+        System.out.println(z);
+        System.out.println(Integer.parseInt(str.substring(0, 2)));
     }
 
     @Test
@@ -139,6 +139,39 @@ public class JavaTest {
     }
 
     @Test
+    public void pp1() {
+        /*
+            Pattern pattern = Pattern.compile("^[0-9a-z]");
+            String str = "Q2scanner.nextLine()";
+            Matcher matcher = pattern.matcher(str);
+            boolean isValid = matcher.find();
+            */
+
+            String str = "2scanner.nextLine()";
+            boolean isValid = str.matches("^[0-9a-z]");
+            if (!isValid) {
+                System.out.print("!error");
+            }
+    }
+
+    @Test
+    public void pp2() {
+        /*
+            Pattern pattern = Pattern.compile("^[0-9a-z]");
+            String str = "Q2scanner.nextLine()";
+            Matcher matcher = pattern.matcher(str);
+            boolean isValid = matcher.find();
+            */
+
+            String str = "2scanner.nextLine()";
+            boolean isValid = str.matches("^[0-9][a].*");
+            //boolean isValid = Pattern.matches("(\\d+)(.*)", str);
+            if (!isValid) {
+                System.out.print("!error");
+            }
+    }
+
+    @Test
     public void p1() {
         int a =4;
         int b =0;
@@ -150,6 +183,35 @@ public class JavaTest {
            System.out.println("finally");
        }
        }
+
+    @Test
+    public void p2() {
+        char char1 = 'a';
+        System.out.println(char1);
+        int char1Num = char1;
+        System.out.println(char1Num);
+
+        int char2 = 'A';
+        System.out.println((int)char2);
+
+        String str1 = "asdfaA";
+        System.out.println(str1.lastIndexOf('A'));
+
+    }
+
+
+    @Test
+    public void p3() {
+        double b1 = 1.0;
+        String abc = "abc";
+        StringBuilder builder = new StringBuilder(abc);
+        String s = builder.append(b1).toString();
+        System.out.println(s);
+        System.out.println(builder.insert(2, 'e'));
+
+
+    }
+
 
 }
 
